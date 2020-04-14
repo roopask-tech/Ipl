@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="row">
+        
+            <div class="col-sm-6 col-xs-3">
+                <div *ngIf="players && players.length>0">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr class="bg-primary">
+                                <th scope="col">Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let player of players">
+                                <td>{{player.name}}</td>
+                                <td>{{player.role}}</td>
+                                <td>{{player.label}}</td>
+                                <td>{{player.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+        <div class="col-sm-6">
+            <div class="mt-2">
+                <div *ngIf="batsman && batsman.length>0">
+                    <h4 class="bg-primary text-white">Highest paid batsman in 2020 IPL</h4>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+
+                        <tbody *ngFor="let batsman of batsman">
+                            <tr>
+                                <td>{{batsman.name}}</td>
+                                <td>{{batsman.role}}</td>
+                                <td>{{batsman.label}}</td>
+                                <td>{{batsman.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div *ngIf="allRounder && allRounder.length>0">
+                    <h4 class="bg-primary text-white">Highest paid All-Rounder in 2020 IPL</h4>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let allRounder of allRounder">
+                            <tr>
+                                <td>{{allRounder.name}}</td>
+                                <td>{{allRounder.role}}</td>
+                                <td>{{allRounder.label}}</td>
+                                <td>{{allRounder.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div *ngIf="bowler && bowler.length>0">
+                    <h4 class="bg-primary text-white">Highest paid Bowler in 2020 IPL</h4>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let bowler of bowler">
+                            <tr>
+                                <td>{{bowler.name}}</td>
+                                <td>{{bowler.role}}</td>
+                                <td>{{bowler.label}}</td>
+                                <td>{{bowler.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div *ngIf="wicketKeepers && wicketKeepers.length>0">
+                    <h4 class="bg-primary text-white">Highest paid WicketKeepers in 2020 IPL</h4>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Label</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let wicketKeepers of wicketKeepers">
+                            <tr>
+                                <td>{{wicketKeepers.name}}</td>
+                                <td>{{wicketKeepers.role}}</td>
+                                <td>{{wicketKeepers.label}}</td>
+                                <td>{{wicketKeepers.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

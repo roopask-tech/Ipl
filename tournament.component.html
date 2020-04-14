@@ -1,0 +1,36 @@
+<div class="row mt-2">
+    <div class="col-md-6"> 
+        <div *ngIf="teams && teams.length > 0">
+            <table class="table table-hover table-responsive">
+                <thead class="myheader">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">Coach</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Home Ground</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let team of teams;index as i" (click)="showTeamDetails(team.label)">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{team.team}}</td>
+                    <td>{{team.label}}</td>
+                    <td>{{team.coach}}</td>
+                    <td>{{team.city}}</td>
+                    <td>{{team.home}}</td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
+    <div class="col-md-6"> 
+        <div class="mt-1">
+            <google-chart [data]="columnChart"></google-chart>
+        </div>
+        <div class="mt-1">
+            <google-chart [data]="pieChart"></google-chart>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<h4>Select Team</h4>
+<div class="row">
+    <div class="col-sm-6">
+<select [(ngModel)]="selectedLabel" class="form-control">
+    <option *ngFor="let t of teamsLabeles" [value]="t">{{t}}</option>
+</select>
+</div>
+<br>
+<br>
+<br>
+<div class="col-sm-6">
+<button mat-raised-button class="btn btn-primary" (click)="submitteamlabel()">submit</button>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+    <div *ngIf="teamPlayers.length>0">
+        <table class="table table-striped table-responsive">
+            <thead>
+                <tr class="thead-dark">
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Level</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let player of teamPlayers">
+                <tr>
+                    <td>{{player.name}}</td>
+                    <td>{{player.role}}</td>
+                    <td>{{player.label}}</td>
+                    <td>{{player.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</div>
+<div class="col-sm-6">
+    <div class="mt-1">
+    <google-chart [data]="pieChart"></google-chart>
+    </div>
+</div> 
+</div>
